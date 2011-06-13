@@ -14,7 +14,29 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B23BFC7013A6BE4D006417C5 /* BBOSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BFC5D13A6BE4C006417C5 /* BBOSCMessage.m */; };
+		B23BFC7113A6BE4D006417C5 /* BBOSCArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BFC5F13A6BE4C006417C5 /* BBOSCArgument.m */; };
+		B23BFC7213A6BE4D006417C5 /* BBOSCAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BFC6113A6BE4C006417C5 /* BBOSCAddress.m */; };
+		B23BFC7313A6BE4D006417C5 /* BBOSCPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BFC6313A6BE4C006417C5 /* BBOSCPacket.m */; };
+		B23BFC7413A6BE4D006417C5 /* BBOSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BFC6513A6BE4C006417C5 /* BBOSCBundle.m */; };
+		B23BFC7513A6BE4D006417C5 /* BBOSCDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BFC6713A6BE4C006417C5 /* BBOSCDispatcher.m */; };
+		B23BFC7613A6BE4D006417C5 /* BBOSCListener.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BFC6913A6BE4C006417C5 /* BBOSCListener.m */; };
+		B23BFC7713A6BE4D006417C5 /* BBOSCSender.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BFC6B13A6BE4C006417C5 /* BBOSCSender.m */; };
+		B23BFC7813A6BE4D006417C5 /* BBOSCDataUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BFC6D13A6BE4C006417C5 /* BBOSCDataUtilities.m */; };
+		B23BFC7913A6BE4D006417C5 /* BBOSCDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B23BFC6F13A6BE4D006417C5 /* BBOSCDecoder.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B23BFBA313A6BA1D006417C5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -28,6 +50,26 @@
 		832B690E1304544F00D164CE /* QDisplay.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.sdef; path = QDisplay.sdef; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* QDisplay-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "QDisplay-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* QDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B23BFC5C13A6BE4C006417C5 /* BBOSCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOSCMessage.h; sourceTree = "<group>"; };
+		B23BFC5D13A6BE4C006417C5 /* BBOSCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOSCMessage.m; sourceTree = "<group>"; };
+		B23BFC5E13A6BE4C006417C5 /* BBOSCArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOSCArgument.h; sourceTree = "<group>"; };
+		B23BFC5F13A6BE4C006417C5 /* BBOSCArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOSCArgument.m; sourceTree = "<group>"; };
+		B23BFC6013A6BE4C006417C5 /* BBOSCAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOSCAddress.h; sourceTree = "<group>"; };
+		B23BFC6113A6BE4C006417C5 /* BBOSCAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOSCAddress.m; sourceTree = "<group>"; };
+		B23BFC6213A6BE4C006417C5 /* BBOSCPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOSCPacket.h; sourceTree = "<group>"; };
+		B23BFC6313A6BE4C006417C5 /* BBOSCPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOSCPacket.m; sourceTree = "<group>"; };
+		B23BFC6413A6BE4C006417C5 /* BBOSCBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOSCBundle.h; sourceTree = "<group>"; };
+		B23BFC6513A6BE4C006417C5 /* BBOSCBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOSCBundle.m; sourceTree = "<group>"; };
+		B23BFC6613A6BE4C006417C5 /* BBOSCDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOSCDispatcher.h; sourceTree = "<group>"; };
+		B23BFC6713A6BE4C006417C5 /* BBOSCDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOSCDispatcher.m; sourceTree = "<group>"; };
+		B23BFC6813A6BE4C006417C5 /* BBOSCListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOSCListener.h; sourceTree = "<group>"; };
+		B23BFC6913A6BE4C006417C5 /* BBOSCListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOSCListener.m; sourceTree = "<group>"; };
+		B23BFC6A13A6BE4C006417C5 /* BBOSCSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOSCSender.h; sourceTree = "<group>"; };
+		B23BFC6B13A6BE4C006417C5 /* BBOSCSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOSCSender.m; sourceTree = "<group>"; };
+		B23BFC6C13A6BE4C006417C5 /* BBOSCDataUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOSCDataUtilities.h; sourceTree = "<group>"; };
+		B23BFC6D13A6BE4C006417C5 /* BBOSCDataUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOSCDataUtilities.m; sourceTree = "<group>"; };
+		B23BFC6E13A6BE4C006417C5 /* BBOSCDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOSCDecoder.h; sourceTree = "<group>"; };
+		B23BFC6F13A6BE4D006417C5 /* BBOSCDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOSCDecoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +95,7 @@
 		29B97314FDCFA39411CA2CEA /* QDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				B23BFBC413A6BAF2006417C5 /* BBOSC */,
 				256AC3D80F4B6AC300CF3369 /* QDisplayApp.h */,
 				256AC3D90F4B6AC300CF3369 /* QDisplayApp.m */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -92,6 +135,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B23BFBC413A6BAF2006417C5 /* BBOSC */ = {
+			isa = PBXGroup;
+			children = (
+				B23BFC6613A6BE4C006417C5 /* BBOSCDispatcher.h */,
+				B23BFC6713A6BE4C006417C5 /* BBOSCDispatcher.m */,
+				B23BFC6813A6BE4C006417C5 /* BBOSCListener.h */,
+				B23BFC6913A6BE4C006417C5 /* BBOSCListener.m */,
+				B23BFC6A13A6BE4C006417C5 /* BBOSCSender.h */,
+				B23BFC6B13A6BE4C006417C5 /* BBOSCSender.m */,
+				B23BFC6C13A6BE4C006417C5 /* BBOSCDataUtilities.h */,
+				B23BFC6D13A6BE4C006417C5 /* BBOSCDataUtilities.m */,
+				B23BFC6E13A6BE4C006417C5 /* BBOSCDecoder.h */,
+				B23BFC6F13A6BE4D006417C5 /* BBOSCDecoder.m */,
+				B23BFC5A13A6BE4C006417C5 /* packets */,
+			);
+			path = BBOSC;
+			sourceTree = "<group>";
+		};
+		B23BFC5A13A6BE4C006417C5 /* packets */ = {
+			isa = PBXGroup;
+			children = (
+				B23BFC6213A6BE4C006417C5 /* BBOSCPacket.h */,
+				B23BFC6313A6BE4C006417C5 /* BBOSCPacket.m */,
+				B23BFC6413A6BE4C006417C5 /* BBOSCBundle.h */,
+				B23BFC6513A6BE4C006417C5 /* BBOSCBundle.m */,
+				B23BFC5B13A6BE4C006417C5 /* Messages */,
+			);
+			name = packets;
+			sourceTree = "<group>";
+		};
+		B23BFC5B13A6BE4C006417C5 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				B23BFC5C13A6BE4C006417C5 /* BBOSCMessage.h */,
+				B23BFC5D13A6BE4C006417C5 /* BBOSCMessage.m */,
+				B23BFC5E13A6BE4C006417C5 /* BBOSCArgument.h */,
+				B23BFC5F13A6BE4C006417C5 /* BBOSCArgument.m */,
+				B23BFC6013A6BE4C006417C5 /* BBOSCAddress.h */,
+				B23BFC6113A6BE4C006417C5 /* BBOSCAddress.m */,
+			);
+			name = Messages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +188,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				B23BFBA313A6BA1D006417C5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -120,7 +207,14 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "QDisplay" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* QDisplay */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -151,6 +245,16 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* QDisplayApp.m in Sources */,
+				B23BFC7013A6BE4D006417C5 /* BBOSCMessage.m in Sources */,
+				B23BFC7113A6BE4D006417C5 /* BBOSCArgument.m in Sources */,
+				B23BFC7213A6BE4D006417C5 /* BBOSCAddress.m in Sources */,
+				B23BFC7313A6BE4D006417C5 /* BBOSCPacket.m in Sources */,
+				B23BFC7413A6BE4D006417C5 /* BBOSCBundle.m in Sources */,
+				B23BFC7513A6BE4D006417C5 /* BBOSCDispatcher.m in Sources */,
+				B23BFC7613A6BE4D006417C5 /* BBOSCListener.m in Sources */,
+				B23BFC7713A6BE4D006417C5 /* BBOSCSender.m in Sources */,
+				B23BFC7813A6BE4D006417C5 /* BBOSCDataUtilities.m in Sources */,
+				B23BFC7913A6BE4D006417C5 /* BBOSCDecoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +285,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -198,6 +306,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = QDisplay_Prefix.pch;

@@ -27,6 +27,7 @@
 
 #import "QDisplayApp.h"
 
+
 @interface QDisplayApp (Private)
 
 - (void) updateCountdownLabel:(NSTimer *)t;
@@ -35,6 +36,7 @@
 
 
 @implementation QDisplayApp
+@synthesize oscSender;
 
 - (void) applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -43,6 +45,10 @@
 	message = [[label stringValue] copy];
     countdownTargetTimeInterval = 0.0;
     countdownTimer = nil;
+	
+	[self setOscSender:[BBOSCSender senderWithDestinationHostName:@"localhost" portNumber:10000]];
+	
+	
 }
 
 @synthesize window;
@@ -56,6 +62,13 @@
 		[label setStringValue:message];
 	else
 		[label setStringValue:@""];
+	
+	
+	BBOSCMessage * newOscMessage = [BBOSCMessage messageWithBBOSCAddress:[BBOSCAddress addressWithString:@"/ard/cue"]];
+	[newOscMessage attachArgument:[BBOSCArgument argumentWithString:message]];
+	if (![[self oscSender] sendOSCPacket:newOscMessage]) {
+		NSLog(@"Oh Noes!!");
+	}	
 }
 
 @synthesize message;

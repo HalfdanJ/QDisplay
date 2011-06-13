@@ -27,6 +27,17 @@
 
 #import <Cocoa/Cocoa.h>
 
+
+#import "BBOSCArgument.h"
+#import "BBOSCListener.h"
+#import "BBOSCDispatcher.h"
+#import "BBOSCDataUtilities.h"
+#import "BBOSCMessage.h"
+#import "BBOSCBundle.h"
+#import "BBOSCDecoder.h"
+#import "BBOSCSender.h"
+#import "BBOSCAddress.h"
+
 @interface QDisplayApp : NSApplication <NSApplicationDelegate>
 {
 	NSString *message;
@@ -35,10 +46,13 @@
     IBOutlet NSTextField *countdownLabel;
     NSTimer *countdownTimer;
     double countdownTargetTimeInterval;
+	
+	BBOSCSender * oscSender;
 }
 
 @property (copy) NSString *message;
 @property (copy) NSNumber *timeRemaining;
 @property (retain) IBOutlet NSWindow *window;
+@property (retain) BBOSCSender* oscSender;
 
 @end
