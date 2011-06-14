@@ -135,7 +135,14 @@
                                             minutes,
                                             seconds < 10.0 ? @"0" : @"",
                                             seconds]];
-    }
+		BBOSCMessage * newOscMessage2 = [BBOSCMessage messageWithBBOSCAddress:[BBOSCAddress addressWithString:@"/ard/timeleft"]];
+		[newOscMessage2 attachArgument:[BBOSCArgument argumentWithFloat:seconds]];
+		if (![[self oscSender] sendOSCPacket:newOscMessage2]) {
+			NSLog(@"Oh Noes!!2");
+		}	
+	}
+	
+	
 }
-
+	
 @end
