@@ -46,10 +46,10 @@
     countdownTargetTimeInterval = 0.0;
     countdownTimer = nil;
 	
-	[self setOscSender:[BBOSCSender senderWithDestinationHostName:@"localhost" portNumber:10000]];
-	
-	
+	[self createSender];
+
 }
+
 
 @synthesize window;
 
@@ -86,6 +86,22 @@
 {
     return [NSNumber numberWithDouble:countdownTargetTimeInterval - [NSDate timeIntervalSinceReferenceDate]];
 }
+
+
+-(IBAction) setIpAdress:(id)sender{
+	[self createSender];
+
+}
+
+-(IBAction) setPort:(id)sender{
+	[self createSender];
+}
+
+-(void) createSender{
+	[self setOscSender:[BBOSCSender senderWithDestinationHostName:[ipAdressField stringValue] portNumber:[portField intValue]]];
+	NSLog(@"Create osc sender: ip: %@ port %i",[ipAdressField stringValue], [portField intValue]);
+}
+
 
 @end
 

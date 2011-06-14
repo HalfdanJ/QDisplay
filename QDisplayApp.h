@@ -48,6 +48,9 @@
     double countdownTargetTimeInterval;
 	
 	BBOSCSender * oscSender;
+	
+	IBOutlet NSTextField *ipAdressField;
+	IBOutlet NSTextField *portField;
 }
 
 @property (copy) NSString *message;
@@ -55,4 +58,7 @@
 @property (retain) IBOutlet NSWindow *window;
 @property (retain) BBOSCSender* oscSender;
 
+-(IBAction) setIpAdress:(id)sender;
+-(IBAction) setPort:(id)sender;
+-(void) createSender;
 @end
