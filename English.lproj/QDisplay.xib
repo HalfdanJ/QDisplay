@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="29"/>
 			<integer value="534"/>
+			<integer value="29"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -261,7 +261,7 @@ ZSBoZXJlLiIKCXNldCB0aW1lUmVtYWluaW5nIHRvIDEwLjUKZW5kIHRlbGw</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="219476392">
 								<int key="NSCellFlags">67239424</int>
-								<int key="NSCellFlags2">138674176</int>
+								<int key="NSCellFlags2">4456448</int>
 								<string key="NSContents"/>
 								<reference key="NSSupport" ref="170208087"/>
 								<reference key="NSControlView" ref="570944635"/>
@@ -339,12 +339,6 @@ ZSBoZXJlLiIKCXNldCB0aW1lUmVtYWluaW5nIHRvIDEwLjUKZW5kIHRlbGw</string>
 				<string key="NSClassName">NSFontManager</string>
 			</object>
 			<object class="NSUserDefaultsController" id="280822928">
-				<object class="NSMutableArray" key="NSDeclaredKeys">
-					<bool key="EncodedWithXMLCoder">YES</bool>
-					<string>ipAdress</string>
-					<string>port</string>
-					<string>ipAdesses</string>
-				</object>
 				<bool key="NSSharedInstance">YES</bool>
 			</object>
 		</object>
@@ -839,9 +833,9 @@ ZSBoZXJlLiIKCXNldCB0aW1lUmVtYWluaW5nIHRvIDEwLjUKZW5kIHRlbGw</string>
 					<string>{{313, 1298}, {167, 23}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{998, 766}, {604, 232}}</string>
+					<string>{{1278, 89}, {604, 232}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{998, 766}, {604, 232}}</string>
+					<string>{{1278, 89}, {604, 232}}</string>
 					<boolean value="NO"/>
 					<boolean value="YES"/>
 					<string>{285, 126}</string>

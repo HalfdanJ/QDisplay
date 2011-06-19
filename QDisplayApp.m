@@ -79,7 +79,7 @@
     if (newSeconds <= 0.0) return;
     countdownTargetTimeInterval = [NSDate timeIntervalSinceReferenceDate] + newSeconds;
     [countdownTimer invalidate];
-    countdownTimer = [NSTimer scheduledTimerWithTimeInterval:0.03 target:self selector:@selector(updateCountdownLabel:) userInfo:nil repeats:YES];
+    countdownTimer = [NSTimer scheduledTimerWithTimeInterval:0.04 target:self selector:@selector(updateCountdownLabel:) userInfo:nil repeats:YES];
 }
 
 - (NSNumber *) timeRemaining
@@ -115,28 +115,32 @@
     {
         [countdownTimer invalidate];
         countdownTimer = nil;
-        
-        [countdownLabel setStringValue:@""];
+        [countdownLabel setStringValue:@"00:00:00:00"];
     }
     else
     {
-        int hours = (int)(seconds / 3600.0);
+        float floatSeconds = (float) (countdownTargetTimeInterval - [NSDate timeIntervalSinceReferenceDate]);
+		int intSeconds = (int) (countdownTargetTimeInterval - [NSDate timeIntervalSinceReferenceDate]);
+		float millis = (float) ((floatSeconds-intSeconds));
+		int frames = (float) (millis*25);
+		int hours = (float) (seconds / 3600.0);
         seconds = fmod(seconds, 3600.0);
-        int minutes = (int)(seconds / 60.0);
+        int minutes = (float)(seconds / 60.0);
         seconds = fmod(seconds, 60.0);
-        if (hours > 0)
-            [countdownLabel setStringValue:[NSString stringWithFormat:@"%d:%02d:%@%2.1f",
-                                            hours,
-                                            minutes,
-                                            seconds < 10.0 ? @"0" : @"",
-                                            seconds]];
-        else
-            [countdownLabel setStringValue:[NSString stringWithFormat:@"%d:%@%2.1f",
-                                            minutes,
-                                            seconds < 10.0 ? @"0" : @"",
-                                            seconds]];
-		BBOSCMessage * newOscMessage2 = [BBOSCMessage messageWithBBOSCAddress:[BBOSCAddress addressWithString:@"/ard/timeleft"]];
-		[newOscMessage2 attachArgument:[BBOSCArgument argumentWithFloat:seconds]];
+		int labelSeconds = (float) (seconds);
+		
+		[countdownLabel setStringValue:[NSString stringWithFormat:@"%02.2d:%02.2d:%02.2d:%02.2d",
+										hours,
+										minutes,
+										labelSeconds,
+										frames
+										]];
+											
+											
+									
+
+			BBOSCMessage * newOscMessage2 = [BBOSCMessage messageWithBBOSCAddress:[BBOSCAddress addressWithString:@"/ard/timeleft"]];
+		[newOscMessage2 attachArgument:[BBOSCArgument argumentWithFloat:floatSeconds]];
 		if (![[self oscSender] sendOSCPacket:newOscMessage2]) {
 			NSLog(@"Oh Noes!!2");
 		}	
