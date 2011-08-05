@@ -24,6 +24,15 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+//
+//
+//
+//
+//	OSC SUPPORT ADDED BY sorenknud.dk with help from halfdanj.dk
+//	
+
+
+
 
 #import "QDisplayApp.h"
 
@@ -116,6 +125,12 @@
         [countdownTimer invalidate];
         countdownTimer = nil;
         [countdownLabel setStringValue:@"00:00:00:00"];
+		BBOSCMessage * newOscMessage2 = [BBOSCMessage messageWithBBOSCAddress:[BBOSCAddress addressWithString:@"/ard/timeleft"]];
+		[newOscMessage2 attachArgument:[BBOSCArgument argumentWithFloat:0.0]];
+		if (![[self oscSender] sendOSCPacket:newOscMessage2]) {
+			NSLog(@"Oh Noes!!3");
+		}	
+		
     }
     else
     {
@@ -136,8 +151,6 @@
 										frames
 										]];
 											
-											
-									
 
 			BBOSCMessage * newOscMessage2 = [BBOSCMessage messageWithBBOSCAddress:[BBOSCAddress addressWithString:@"/ard/timeleft"]];
 		[newOscMessage2 attachArgument:[BBOSCArgument argumentWithFloat:floatSeconds]];
