@@ -107,8 +107,9 @@
 }
 
 -(void) createSender{
-	[self setOscSender:[BBOSCSender senderWithDestinationHostName:[ipAdressField stringValue] portNumber:[portField intValue]]];
-	NSLog(@"Create osc sender: ip: %@ port %i",[ipAdressField stringValue], [portField intValue]);
+    NSLog(@"Create osc sender: ip: %@ port %i",[ipAdressField stringValue], [portField intValue]);
+    if([[ipAdressField stringValue] length] > 0 && [portField intValue] != 0)
+        [self setOscSender:[BBOSCSender senderWithDestinationHostName:[ipAdressField stringValue] portNumber:[portField intValue]]];
 }
 
 
